@@ -20,7 +20,6 @@ body {
     font-weight: 400;
     letter-spacing: -0.05rem;
     line-height: 1.6;
-    background-image: var(--gradient-1);
 }
 
 img {
@@ -39,6 +38,12 @@ h1 {
     letter-spacing: 1.7rem;
     line-height: 1.23;
     text-transform: uppercase;
+
+    @media (--lg-viewport) {
+        font-size: 4.8rem;
+        letter-spacing: 0.53em;
+        line-height: 1.33;
+    }
 }
 
 h1 span {

@@ -18,11 +18,17 @@ form {
 
     font-family: inherit;
     font-size: inherit;
+
+    @media (--lg-viewport) {
+        height: 5.6rem;
+        margin-right: -10rem;
+    }
 }
 
 .email:focus {
     color: var(--gray);
 }
+
 ::placeholder {
     color: hsla(0, 36%, 70%, 0.8);
 }
@@ -39,6 +45,10 @@ button {
     box-shadow: 1px 9px 19px rgba(206, 150, 150, 0.7);
 
     cursor: pointer;
+
+    @media (--lg-viewport) {
+        width: 10rem;
+    }
 }
 
 button:active {

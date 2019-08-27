@@ -2,22 +2,53 @@
     max-width: 144rem;
 
     text-align: center;
+
+    @media (--lg-viewport) {
+        margin: auto;
+        text-align: left;
+    }
 }
 
 .grid {
     background-image: var(--gradient-1);
+
+    @media (--lg-viewport) {
+        display: grid;
+
+        grid-template-columns: 2fr 1.3fr;
+        grid-template-rows: 1fr 4fr;
+        background-image: url("../images/bg-pattern-desktop.svg"), var(--gradient-1);
+    }
 }
 
 header {
     padding-top: 1.875em;
     padding-bottom: 1.875em;
+
+    @media (--lg-viewport) {
+        display: grid;
+
+        align-content: center;
+    }
 }
 
 .logo {
     max-width: 100px;
+
+    @media (--lg-viewport) {
+        max-width: 100%;
+    }
+}
+
+picture {
+    grid-area: 1 / 2 / 3 / 3;
 }
 
 main {
     padding-top: 6.5rem;
     padding-bottom: 4.2rem;
+}
+
+footer {
+    padding: 2rem 0;
 }
