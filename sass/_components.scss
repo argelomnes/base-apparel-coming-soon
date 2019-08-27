@@ -12,14 +12,14 @@ form {
     padding: 2rem 2.5rem 1.9rem;
 
     border: solid 1px var(--red-desat);
-    border-radius: 100px;
+    border-radius: 10rem;
 
     background-color: transparent;
 
     font-family: inherit;
     font-size: inherit;
 
-    @media (--lg-viewport) {
+    @media (--sm-viewport) {
         height: 5.6rem;
         margin-right: -10rem;
     }
@@ -39,14 +39,14 @@ button {
     transition: 0.2s;
 
     border: 0;
-    border-radius: 100px;
+    border-radius: 10rem;
 
     background-image: var(--gradient-2);
     box-shadow: 1px 9px 19px rgba(206, 150, 150, 0.7);
 
     cursor: pointer;
 
-    @media (--lg-viewport) {
+    @media (--sm-viewport) {
         width: 10rem;
     }
 }

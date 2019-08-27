@@ -3,12 +3,16 @@
     padding-left: 1.875em;
 
     @media (--lg-viewport) {
+        padding-right: 12rem;
+        padding-left: 6rem;
+    }
+    @media (--lg2-viewport) {
         padding-right: 22rem;
         padding-left: 16rem;
     }
 }
 
 .hero {
-    max-width: 610px;
+    max-width: 61rem;
     margin: auto;
 }

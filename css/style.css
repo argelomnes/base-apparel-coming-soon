@@ -19,6 +19,8 @@ html {
   padding: 0; }
 
 body {
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-image: var(--gradient-1);
   color: hsl(0, 36%, 70%);
   color: var(--red-desat);
   font-family: "Josefin Sans", sans-serif;
@@ -26,6 +28,13 @@ body {
   font-weight: 400;
   letter-spacing: -0.05rem;
   line-height: 1.6; }
+  @media (min-width: 720px) {
+    body {
+      display: flex;
+      flex-direction: column; } }
+  @media (min-width: 960px) {
+    body {
+      height: 100vh; } }
 
 img {
   display: block; }
@@ -57,22 +66,26 @@ h1 span {
   text-align: center; }
   @media (min-width: 960px) {
     .container {
-      margin: auto;
       text-align: left; } }
+  @media (min-width: 960px) and (max-width: 1440px) {
+    .container {
+      max-width: 100vw;
+      overflow: hidden; } }
+  @media (min-width: 1600px) {
+    .container {
+      margin: auto;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.24); } }
 
-.grid {
-  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-  background-image: var(--gradient-1); }
-  @media (min-width: 960px) {
-    .grid {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 2fr 1.3fr;
-      grid-template-columns: 2fr 1.3fr;
-      -ms-grid-rows: 1fr 4fr;
-      grid-template-rows: 1fr 4fr;
-      background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-      background-image: url("../images/bg-pattern-desktop.svg"), var(--gradient-1); } }
+@media (min-width: 960px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1.3fr;
+    grid-template-columns: 2fr 1.3fr;
+    -ms-grid-rows: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-image: url("../images/bg-pattern-desktop.svg"), var(--gradient-1); } }
 
 header {
   padding-top: 1.875em;
@@ -82,10 +95,14 @@ header {
       display: -ms-grid;
       display: grid;
       align-content: center; } }
+  @media (min-width: 720px) and (max-width: 959px) {
+    header {
+      max-width: 67rem;
+      margin: auto; } }
 
 .logo {
-  max-width: 100px; }
-  @media (min-width: 960px) {
+  max-width: 10rem; }
+  @media (min-width: 720px) {
     .logo {
       max-width: 100%; } }
 
@@ -99,6 +116,12 @@ picture {
 main {
   padding-top: 6.5rem;
   padding-bottom: 4.2rem; }
+  @media (min-width: 720px) and (max-width: 959px) {
+    main {
+      position: relative;
+      max-width: 530px;
+      margin: -40rem auto 3rem;
+      background: #fff; } }
 
 footer {
   padding: 2rem 0; }
@@ -114,11 +137,11 @@ form {
   padding: 2rem 2.5rem 1.9rem;
   border: solid 1px hsl(0, 36%, 70%);
   border: solid 1px var(--red-desat);
-  border-radius: 100px;
+  border-radius: 10rem;
   background-color: transparent;
   font-family: inherit;
   font-size: inherit; }
-  @media (min-width: 960px) {
+  @media (min-width: 640px) {
     .email {
       height: 5.6rem;
       margin-right: -10rem; } }
@@ -146,12 +169,12 @@ button {
   width: 6.4rem;
   transition: 0.2s;
   border: 0;
-  border-radius: 100px;
+  border-radius: 10rem;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   background-image: var(--gradient-2);
   box-shadow: 1px 9px 19px rgba(206, 150, 150, 0.7);
   cursor: pointer; }
-  @media (min-width: 960px) {
+  @media (min-width: 640px) {
     button {
       width: 10rem; } }
 
@@ -169,9 +192,13 @@ button img {
   padding-left: 1.875em; }
   @media (min-width: 960px) {
     .row {
+      padding-right: 12rem;
+      padding-left: 6rem; } }
+  @media (min-width: 1366px) {
+    .row {
       padding-right: 22rem;
       padding-left: 16rem; } }
 
 .hero {
-  max-width: 610px;
+  max-width: 61rem;
   margin: auto; }

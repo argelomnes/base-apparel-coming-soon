@@ -14,12 +14,24 @@ html {
 }
 
 body {
+    background-image: var(--gradient-1);
+
     color: var(--red-desat);
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: -0.05rem;
     line-height: 1.6;
+
+    @media (--md-viewport) {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    @media (--lg-viewport) {
+        height: 100vh;
+    }
 }
 
 img {
