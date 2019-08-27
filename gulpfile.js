@@ -29,11 +29,7 @@ function css() {
     return gulp
         .src("./sass/main.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(
-            postcss([
-                postcssPresetEnv({ stage: 0, autoprefixer: { grid: true } })
-            ])
-        )
+        .pipe(postcss([postcssPresetEnv({ stage: 0, autoprefixer: { grid: true } })]))
         .pipe(
             purgecss({
                 content: [paths.html.src]
